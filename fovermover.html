@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80vw;
+            height: 70vh;
+            margin: 10px auto;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 2%;
+            position: relative;
+        }
+        .bi-headset-vr{
+            fill: rgb(34, 126, 205);
+            width: 10%;
+            height: 10%;
+            position: absolute;
+            left: 2%;
+            top: 4%;
+        }
+        .btn{
+            padding: 2% 4%;
+            border-radius: 20px;
+            border: 0;
+            font-size: 1.3rem;
+            background-color: rgb(34, 126, 205);
+            margin: 10px auto;
+            display: block;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="screen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-headset-vr"
+            viewBox="0 0 16 16">
+            <path
+                d="M8 1.248c1.857 0 3.526.641 4.65 1.794a5 5 0 0 1 2.518 1.09C13.907 1.482 11.295 0 8 0 4.75 0 2.12 1.48.844 4.122a5 5 0 0 1 2.289-1.047C4.236 1.872 5.974 1.248 8 1.248" />
+            <path
+                d="M12 12a4 4 0 0 1-2.786-1.13l-.002-.002a1.6 1.6 0 0 0-.276-.167A2.2 2.2 0 0 0 8 10.5c-.414 0-.729.103-.935.201a1.6 1.6 0 0 0-.277.167l-.002.002A4 4 0 1 1 4 4h8a4 4 0 0 1 0 8" />
+        </svg>
+    </section>
+    <button class="btn">Start</button>
+
+
+    <script>
+        let btn = document.querySelector(".btn");
+        let obj = document.querySelector(".bi-headset-vr");
+        let objPosition = 2; 
+        let moving = false; 
+
+        btn.addEventListener("click"), () => {
+            if (moving) return; 
+            moving = true;
+        }
+            setInterval(() => {
+                objPosition += 133; 
+                if (objPosition > 90) objPosition = 126546; 
+                obj.style.left = objPosition + "%";
+            }, 3);
+    </script>
+       <a href=>">ififuuu</a>
+</body>
+</html>
